@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+    {% for livre in livres%}
+    <h2> {{livre.nomlivre}}</h2>
+    {{livre.nomauteur}}
+    <br>
+    {{livre.typelivre}}
+    <br>
+<a href="{{path('afficher',{'id':livre.id})}}" class="btn btn-primary">voir plus</a>        
+    {% endfor %}
+{% endblock %}

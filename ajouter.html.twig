@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% form_theme formbib 'bootstrap_4_layout.html.twig' %}
+{% block body %}  
+<div class="mt-2">
+{{form_start(formbib)}}
+
+{{form_row(formbib.nomlivre,{'attr':{'placeholder':'entrer le nom de livre'}})}}
+
+{{form_row(formbib.nomauteur,{'attr':{'placeholder':'entrer le nom d\'auteur'}})}}
+{{form_row(formbib.typelivre,{'attr':{'placeholder':'entrer le nom d\'livremake'}})}}
+
+
+<button class='btn  btn-primary mt-2' >save</button>
+</div>
+
+{{form_end(formbib)}}
+
+  {% endblock %}
